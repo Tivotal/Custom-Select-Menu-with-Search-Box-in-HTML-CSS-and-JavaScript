@@ -1,0 +1,129 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1b1b1b;
+}
+
+::selection {
+  background: #0b8c4c;
+  color: #fff;
+}
+
+.wrapper {
+  width: 370px;
+  margin: 85px auto 0;
+}
+
+.wrapper .btn {
+  height: 65px;
+  padding: 0 20px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.wrapper .btn i {
+  font-size: 31px;
+  color: #0b8c4c;
+  transition: transform 0.3s linear;
+}
+
+.wrapper.active .btn i {
+  transform: rotate(-180deg);
+}
+
+.wrapper .content {
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 7px;
+  display: none;
+}
+
+.wrapper.active .content {
+  display: block;
+}
+
+.wrapper .content .search {
+  position: relative;
+}
+
+.content .search i {
+  font-size: 20px;
+  color: #999;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.content .search input {
+  height: 50px;
+  width: 100%;
+  font-size: 17px;
+  padding: 0 20px 0 43px;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+}
+
+.search input::placeholder {
+  color: #bfbfbf;
+}
+
+.search input:focus {
+  padding-left: 42px;
+  border: 2px solid #0b8c4c;
+}
+
+.content .options {
+  max-height: 250px;
+  margin-top: 10px;
+  padding-right: 7px;
+  overflow-y: auto;
+}
+
+.options::-webkit-scrollbar {
+  width: 7px;
+}
+
+.options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.options li {
+  height: 50px;
+  padding: 0 13px;
+  line-height: 50px;
+  font-size: 21px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.options li:hover,
+.options li.selected {
+  background: #f2f2f2;
+}
