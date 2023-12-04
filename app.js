@@ -55,7 +55,7 @@ function addData(selectedCity) {
 
 function selectOption(item) {
   searchInput.value = "";
-  addData(item);
+  addData(item.innerText);
   wrapper.classList.remove("active");
   btn.firstElementChild.innerText = item.innerText;
 }
